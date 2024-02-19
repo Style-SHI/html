@@ -18,18 +18,25 @@
     Your browser does not support the audio element.
 </audio>
 
-<button onclick="toggleAudio()">Play/Pause Music</button>
+<button id="playButton">Play Music</button>
+<button id="pauseButton" style="display:none;">Pause Music</button>
 
 <script>
     var audio = document.getElementById("bgMusic");
+    var playButton = document.getElementById("playButton");
+    var pauseButton = document.getElementById("pauseButton");
 
-    function toggleAudio() {
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-        }
-    }
+    playButton.addEventListener("click", function() {
+        audio.play();
+        playButton.style.display = "none";
+        pauseButton.style.display = "inline";
+    });
+
+    pauseButton.addEventListener("click", function() {
+        audio.pause();
+        pauseButton.style.display = "none";
+        playButton.style.display = "inline";
+    });
 </script> 
 body {
     margin: 0
