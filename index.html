@@ -12,32 +12,8 @@
     -webkit-text-size-adjust: 100%
 }
 
+<audio src="media/music.mp3" id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
 
-<audio id="bgMusic" loop>
-    <source src="media/music.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
-
-<button id="playButton">Play Music</button>
-<button id="pauseButton" style="display:none;">Pause Music</button>
-
-<script>
-    var audio = document.getElementById("bgMusic");
-    var playButton = document.getElementById("playButton");
-    var pauseButton = document.getElementById("pauseButton");
-
-    playButton.addEventListener("click", function() {
-        audio.play();
-        playButton.style.display = "none";
-        pauseButton.style.display = "inline";
-    });
-
-    pauseButton.addEventListener("click", function() {
-        audio.pause();
-        pauseButton.style.display = "none";
-        playButton.style.display = "inline";
-    });
-</script> 
 body {
     margin: 0
 }
