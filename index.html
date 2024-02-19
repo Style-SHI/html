@@ -13,8 +13,23 @@
 }
 
 
+<audio id="bgMusic" loop>
+    <source src="media/music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<button onclick="toggleAudio()">Play/Pause Music</button>
+
 <script>
-  window.onload = function() {var audio = new Audio('media/music.mp3');audio.play();}
+    var audio = document.getElementById("bgMusic");
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
 </script> 
 body {
     margin: 0
