@@ -1109,11 +1109,12 @@ body,.overlay {
         S.init();
     </script>
 
-   
- <audio autoplay loop muted controls autoplay>
-        <source src="media/music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
- </audio>
+<script>
+window.onload = function() {
+  var audio = new Audio('media/music.mp3');
+  audio.play();
+}
+</script>  
 
 </body>
 
